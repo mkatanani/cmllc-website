@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI and Operations Advisory for Growing Businesses | Capability Methods</title>
 <meta name="description" content="Know where you stand before you spend on AI or a new platform. A 3-week diagnostic, a fractional senior advisor, and bounded builds. Fixed fees, one dedicated Principal Consultant, written scope.">
+<link rel="canonical" href="https://services.capabilitymethods.com/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MKHZ5TBPRN"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MKHZ5TBPRN');</script>
 <style>
 :root{--indigo:#350F88;--purple:#6C4FA3;--red:#D41409;--ink:#262626;--ink2:#5A5A5A;--line:#DCD5EE;--tint:#F3F0FA;--font:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -349,7 +352,7 @@ footer{padding-block:20px;color:var(--ink2);font-size:13px;border-top:1px solid 
   </div>
 </div></section>
 
-<footer><div class="wrap">© 2026 Capability Methods — trademarks of Capability Methods LLC</div></footer>
+<footer><div class="wrap">© 2026 Capability Methods — trademarks of Capability Methods LLC<br>This site uses Google Analytics cookies to count visits and see which pages are used.</div></footer>
 
 <script>
 const SF_URL='https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
@@ -388,6 +391,7 @@ $('f').addEventListener('submit',async e=>{
   const bot=$('hp').value||(Date.now()-loadedAt<3000);
   try{
     if(!bot)await fetch(SF_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:buildParams(d,location.search).toString()});
+    if(!bot&&window.gtag)gtag('event','generate_lead',{lead_source:'services_guide'});
   }catch(x){
     $('go').disabled=false;$('go').textContent='Send me the guide';
     $('err').textContent='Something went wrong sending that. Please email info@capabilitymethods.com and we will send the guide.';return;
