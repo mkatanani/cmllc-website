@@ -221,7 +221,7 @@ footer{padding-block:20px;color:var(--ink2);font-size:13px;border-top:1px solid 
 <section><div class="wrap">
   <div class="eyebrow">For larger organizations</div>
   <h2>Part of a larger organization? There is a 12-week program for you.</h2>
-  <p class="lede">Business Process Architecture and AI Enablement is for medium to large organizations, often an Infrastructure, IT operations or operations team inside a bigger company. We map and measure how work flows, build two AI-enabled pilots on the tools you already have, and measure the result. Fixed fee, 12 weeks, one dedicated Principal Consultant.</p>
+  <p class="lede">Business Process Architecture and AI Enablement is for mid-sized organizations with $50M to $499M in revenue, often an Infrastructure, IT operations or operations team inside a bigger company. We map and measure how work flows, build two AI-enabled pilots on the tools you already have, and measure the result. Fixed fee, 12 weeks, one dedicated Principal Consultant.</p>
   <a class="btn" href="https://services.capabilitymethods.com/business-process-architecture/">See the 12-week program</a>
 </div></section>
 
@@ -274,7 +274,7 @@ footer{padding-block:20px;color:var(--ink2);font-size:13px;border-top:1px solid 
   <h2>Senior, independent and built for businesses your size.</h2>
   <p class="lede">Enterprise methods, without the enterprise price tag or the six-month study.</p>
   <div class="who">
-    <div class="card"><span class="badge">1</span><h3>Built from real delivery</h3><p>The method comes from real enterprise delivery work, then was right-sized for businesses with $1M to $15M in revenue. It was not drafted from theory.</p></div>
+    <div class="card"><span class="badge">1</span><h3>Built from real delivery</h3><p>The method comes from real enterprise delivery work, then was right-sized for businesses with $5M to $50M in revenue. It was not drafted from theory.</p></div>
     <div class="card"><span class="badge">2</span><h3>A dedicated Principal Consultant</h3><p>A dedicated Principal Consultant scopes, delivers and reports at every tier. No rotating bench and no hand-offs between account managers.</p>
       <div class="creds"><span>TOGAF/DFSS</span><span>Lean Six Sigma Master Black Belt</span><span>SAFe Release Train Engineer</span><span>U.S. patent holder, AI/ML defect prediction</span></div></div>
     <div class="card"><span class="badge">3</span><h3>Honest about capacity</h3><p>The work is hands-on, so capacity is limited on purpose. The monthly advisory has a set number of hours, agreed in writing, and we take on no more than two build projects at a time. That is how you get real attention.</p></div>
@@ -338,7 +338,7 @@ footer{padding-block:20px;color:var(--ink2);font-size:13px;border-top:1px solid 
           <div class="row"><input id="first" placeholder="First name" autocomplete="given-name" aria-label="First name"><input id="last" placeholder="Last name" autocomplete="family-name" aria-label="Last name"></div>
           <input id="email" type="email" placeholder="Work email" autocomplete="email" aria-label="Work email">
           <div class="row"><input id="company" placeholder="Company" autocomplete="organization" aria-label="Company"><input id="phone" type="tel" placeholder="Phone (optional)" autocomplete="tel" aria-label="Phone, optional"></div>
-          <select id="rev" aria-label="Annual revenue"><option value="">Annual revenue</option><option>Under $1M</option><option>$1M to $5M</option><option>$5M to $15M</option><option>Over $15M</option><option>Prefer not to say</option></select>
+          <select id="rev" aria-label="Annual revenue"><option value="">Annual revenue</option><option>Under $5M</option><option>$5M to $50M</option><option>$50M to $499M</option><option>$500M or more</option><option>Prefer not to say</option></select>
           <select id="need" aria-label="What are you hoping to solve?"><option value="">What are you hoping to solve?</option><option>Know if we are ready for AI</option><option>Fix how our operations run</option><option>Set up or fix Salesforce or our CRM</option><option>Not sure yet</option></select>
           <input id="hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <label class="consent"><input type="checkbox" id="consent"> I agree that Capability Methods may contact me about this guide and my business.</label>
@@ -367,9 +367,9 @@ const SF_UTM_CAMPAIGN='00NDo00000ExQ1l';
 const SF_LINKEDIN_POST='00NDo00000ExQ1k';
 const loadedAt=Date.now();
 function rate(rev,need){
-  const icp=rev==='$1M to $5M'||rev==='$5M to $15M';
+  const icp=rev==='$5M to $50M'||rev==='$50M to $499M';
   if(icp&&need&&need!=='Not sure yet')return 'Hot';
-  if(icp||rev==='Prefer not to say'||rev==='Over $15M')return 'Warm';
+  if(icp||rev==='Prefer not to say'||rev==='$500M or more')return 'Warm';
   return 'Cold';
 }
 function buildParams(d,search){
